@@ -1,6 +1,16 @@
 from pyscript import display
 import sys
+import FreeSimpleGUI as sg
 
-display(sys.version)
+layout = [[sg.T("ICH FRESS NEN BESEN")]]
 
-display("THIS IS MAIN")
+w = sg.Window(title="GEIL", layout=layout)
+
+w.read()
+
+while True:
+  e, v = w.read()
+
+  if e is None:
+    w.close()
+    break
